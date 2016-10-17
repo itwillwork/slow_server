@@ -10,7 +10,8 @@
     "express": "^4.14.0"
   },
   "scripts": {
-    "start": "sudo node server &"
+    "start": "sudo nodejs server &",
+    "startLOL": "sudo node server &"
   },
   "repository": {
     "type": "git",
