@@ -1,6 +1,15 @@
 var express = require('express');
 var app = express();
 
+var dd_options = {
+    'response_code':true,
+    'tags': ['app:my_app']
+};
+
+var connect_datadog = require('connect-datadog')(dd_options);
+
+app.use(connect_datadog);
+
 app.get('/', function (req, res) {
     var i, j;
     var len = req.query.n;
